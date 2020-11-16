@@ -1,0 +1,364 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <style>
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: "";
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img,
+        audio,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        ol {
+            /* list-style-type: none; */
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            word-break: break-all;
+            background-color: #fff;
+            font-family: "PingFang SC", miui, system-ui, -apple-system, BlinkMacSystemFont, "Microsoft YaHei", Helvetica Neue, Helvetica, sans-serif;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .draft-container {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            line-height: 1.5;
+            color: #101010;
+            font-size: 0.6826666666666656rem;
+            padding-bottom: 1.066666666666665rem;
+            padding-left: 1.066666666666665rem;
+            padding-right: 1.066666666666665rem;
+            padding-top: 1.066666666666665rem
+        }
+
+        .draft-container p {
+            margin-bottom: 0.38399999999999945rem;
+        }
+
+
+        .draft-container table {
+            width: 100%;
+        }
+
+        .draft-container tr {
+            text-align: center
+        }
+
+        .draft-container td {
+            border: 1px solid #e4e4e5;
+        }
+
+        .draft-container a {
+            color: #0000ee;
+        }
+
+        .draft-container a:hover {
+            color: #0000EE;
+        }
+
+        .draft-container h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .draft-container h1 {
+            margin-bottom: 0.639999999999999rem;
+            margin-top: 0.639999999999999rem;
+            font-size: 0.9386666666666652rem
+        }
+
+        .draft-container h2 {
+            margin-bottom: 0.5546666666666659rem;
+            margin-top: 0.5546666666666659rem;
+            font-size: 0.8106666666666654rem
+        }
+
+        .draft-container h3 {
+            margin-bottom: 0.3413333333333328rem;
+            margin-top: 0.3413333333333328rem;
+            font-size: 0.7253333333333323rem
+        }
+
+        .draft-container h4 {
+            margin-bottom: 0.3413333333333328rem;
+            margin-top: 0.3413333333333328rem;
+            font-size: 0.7253333333333323rem
+        }
+
+        .draft-container h5 {
+            margin-bottom: 0.3413333333333328rem;
+            margin-top: 0.3413333333333328rem;
+            font-size: 0.7253333333333323rem
+        }
+
+        .draft-container h6 {
+            margin-bottom: 0.3413333333333328rem;
+            margin-top: 0.3413333333333328rem;
+            font-size: 0.7253333333333323rem
+        }
+
+
+        .draft-container ul,
+        ol {
+            padding-left: 0.6826666666666656rem
+        }
+
+        .draft-container ul ul,
+        ol ol {
+            padding-left: 0.6826666666666656rem
+        }
+
+        .draft-container ul ul ul,
+        ol ol ol {
+            padding-left: 0.6826666666666656rem
+        }
+
+        .draft-container ul ul ul ul,
+        ol ol ol ol {
+            padding-left: 0.6826666666666656rem
+        }
+
+
+        .draft-container {}
+
+        .draft-table {}
+    </style>
+    <title>申请使用权限</title>
+    <script>
+        !function (e) { function t() { var t = l.getBoundingClientRect().width; 375 < t / n && (t = 375 * n), t /= 16, l.style.fontSize = t + "px", e.rem = t } function i(e, t, i, n) { var a; return function () { var r = n || this, o = arguments, d = i && !a; clearTimeout(a), a = setTimeout((function () { a = null, i || e.apply(r, o) }), t), d && e.apply(r, o) } } var n, a, r, o = e.document, d = e.navigator, l = o.documentElement, c = o.querySelector('meta[name="viewport"]'); r = o.querySelector('meta[name="flexible"]'), c ? (r = c.getAttribute("content").match(/initial-scale=(["']?)([d.]+)(["']?)/)) && (a = parseFloat(r[2]), n = parseInt(1 / a)) : r && (r = r.getAttribute("content").match(/initial-dpr=(["']?)([d.]+)(["']?)/)) && (n = parseFloat(j[2]), a = parseFloat((1 / n).toFixed(2))), !n && !a && (n = e.devicePixelRatio, a = 1 / (n = d.appVersion.match(/android/gi) || d.appVersion.match(/iphone/gi) ? 3 <= n ? 3 : 2 <= n ? 2 : 1 : 1)), l.setAttribute("data-dpr", n), c || (a = '<meta name="viewport" content="width=device-width, initial-scale=' + a + ", maximum-scale=" + a + ", minimum-scale=" + a + ', user-scalable=no" />', l.firstElementChild ? ((d = o.createElement("div")).innerHTML = a, l.firstElementChild.appendChild(d.firstChild)) : o.write(a)), e.dpr = n, e.addEventListener("resize", i(t, 50), !1), e.addEventListener("pageshow", i((function (e) { e.persisted && t() }), 300), !1), "complete" === o.readyState ? o.body.style.fontSize = 16 * 1 + "px" : o.addEventListener("DOMContentLoaded", (function () { o.body.style.fontSize = 16 * 1 + "px" }), !1), t() }(window);
+    </script>
+</head>
+
+<body>
+    <div class="draft-container">
+        <p style="text-align:center;"><strong>鬼谷子应用权限申请与使用情况说明</strong></p>
+        <ol>
+            <li>为保障鬼谷子产品功能实现与安全稳定运行之目的，我们可能会申请或使用操作系统的相关权限；</li>
+            <li>为保障您的知情权，我们通过下列列表将产品可能申请、使用的相关操作系统权限进行展示，您可以根据实际需要对相关权限进行管理；</li>
+            <li>根据产品的升级，申请、使用权限的类型与目的可能会有变动，我们将及时根据这些变动对列表进行调整，以确保您及时获悉权限的申请与使用情况；</li>
+            <li>请您知悉，我们为业务与产品的功能与安全需要，我们可能也会使用第三方SDK，这些第三方也可能会申请或使用相关操作系统权限；</li>
+            <li>在使用产品的过程中，您可能会使用第三方开发的H5页面或小程序，这些第三方开发开发的插件或小程序也可能因业务功能所必需而申请或使用相关操作系统权限。<br /></li>
+        </ol>
+        <p><strong>IOS应用权限申请与使用情况</strong></p>
+        <table className="draft-table">
+            <tr>
+                <td colSpan="1" rowSpan="1">plist中描述名称</td>
+                <td colSpan="1" rowSpan="1">对应功能</td>
+                <td colSpan="1" rowSpan="1">使用场景或目的</td>
+                <td colSpan="1" rowSpan="1">拒绝提供的后果</td>
+            </tr>
+            <tr>
+                <td colSpan="1" rowSpan="1">NSPhotoLibraryAddUsageDescription</td>
+                <td colSpan="1" rowSpan="1">向相册中添加内容</td>
+                <td colSpan="1" rowSpan="1">允许App写入/下载/保存/修改/删除图片、文件、崩溃日志等信息</td>
+                <td colSpan="1" rowSpan="2">可能导致无法实现产品的基本业务功能</td>
+            </tr>
+            <tr>
+                <td colSpan="1" rowSpan="1">NSPhotoLibraryUsageDescription</td>
+                <td colSpan="1" rowSpan="1">读取相册中内容</td>
+                <td colSpan="1" rowSpan="1">允许App读取存储中的图片、文件等内容，主要用于帮助您发布信息等功能</td>
+            </tr>
+            <tr>
+                <td colSpan="1" rowSpan="1">NSCameraUsageDescription</td>
+                <td colSpan="1" rowSpan="1">使用摄像头</td>
+                <td colSpan="1" rowSpan="1">用于意见反馈和运营活动</td>
+                <td colSpan="1" rowSpan="1">可能导致无法正常使用意见反馈和运营活动</td>
+            </tr>
+        </table>
+        <p></p>
+
+        <p><strong>安卓应用权限申请与使用情况</strong></p>
+        <table className="draft-table">
+            <tr>
+                <td colSpan="1" rowSpan="1">权限分组</td>
+                <td colSpan="1" rowSpan="1">权限名称</td>
+                <td colSpan="1" rowSpan="1">权限功能说明<br />（根据业务实际修改）</td>
+                <td colSpan="1" rowSpan="1">使用场景或目的<br />（根据业务实际修改）</td>
+                <td colSpan="1" rowSpan="1">拒绝提供的后果</td>
+            </tr>
+            <tr>
+                <td colSpan="1" rowSpan="1">CAMERA 相机</td>
+                <td colSpan="1" rowSpan="1">CAMERA 拍摄</td>
+                <td colSpan="1" rowSpan="1">使用拍摄照片和视频、完成扫描二维码</td>
+                <td colSpan="1" rowSpan="1">用于意见反馈和运营活动</td>
+                <td colSpan="1" rowSpan="1">可能导致无法正常使用意见反馈和运营活动</td>
+            </tr>
+            <tr>
+                <td colSpan="1" rowSpan="2">STORAGE 存储</td>
+                <td colSpan="1" rowSpan="1">READ_EXTERNAL_STORAGE<br /> 读取外置存储器</td>
+                <td colSpan="1" rowSpan="1">提供读取手机储存空间内数据的功能</td>
+                <td colSpan="1" rowSpan="1">允许App读取存储中的图片、文件等内容，主要用于帮助您发布信息，在本地记录崩溃日志信息（如有）等功能</td>
+                <td colSpan="1" rowSpan="2">可能导致无法实现产品的基本业务功能</td>
+            </tr>
+            <tr>
+                <td colSpan="1" rowSpan="1">WRITE_EXTERNAL_STORAGE<br /> 写入外置存储器</td>
+                <td colSpan="1" rowSpan="1">提供写入外部储存功能</td>
+                <td colSpan="1" rowSpan="1">允许App写入/下载/保存/修改/删除图片、文件、崩溃日志等信息</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>
